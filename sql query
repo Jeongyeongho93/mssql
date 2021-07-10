@@ -1,0 +1,12 @@
+/*1.강남구만 따로 분리해서 개별 테이블 생성 - ziptable-gangnam*/
+/*2.해당테이블 각 같은 도로명으로 묶고 테이블 분리*/
+/*3 각 도로명에 부여된 zipcode 분류 패턴 파악 및 미래에 부여될 코드 예상*/
+
+select zipcode, sido, gungu, doro_nm from dbo.zip_02
+order by zipcode
+;
+
+select zipcode, sido, gungu, doro_nm into ziptable-gangnam
+from dbo.zip_02
+order by zipcode
+;
